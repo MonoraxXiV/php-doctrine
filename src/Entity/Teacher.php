@@ -30,9 +30,9 @@ class Teacher
     private $email;
 
     /**
-     * @ORM\Column(type="string", length=255)
+     * @ORM\Embedded(class="Address")
      */
-    private $adress;
+    private $Address;
 
     /**
      * @ORM\OneToMany(targetEntity=Student::class, mappedBy="teacher")
@@ -73,14 +73,14 @@ class Teacher
         return $this;
     }
 
-    public function getAdress(): ?string
+    public function getAddress(): ?string
     {
-        return $this->adress;
+        return $this->Address;
     }
 
-    public function setAdress(string $adress): self
+    public function setAddress(string $Address): self
     {
-        $this->adress = $adress;
+        $this->Address = $Address;
 
         return $this;
     }
