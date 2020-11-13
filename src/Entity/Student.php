@@ -83,7 +83,7 @@ class Student
         return $this;
     }
 
-    public function getAddress(): ?string
+    public function getAddress(): ?Address
     {
         return $this->address;
     }
@@ -100,7 +100,7 @@ class Student
         return $this->teacher;
     }
 
-    public function setTeacher(?Teacher $teacher): self
+    public function setTeacher(string $teacher): self
     {
         $this->teacher = $teacher;
 
