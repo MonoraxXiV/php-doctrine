@@ -73,12 +73,12 @@ class Teacher
         return $this;
     }
 
-    public function getAddress(): ?string
+    public function getAddress(): ?Address
     {
         return $this->Address;
     }
 
-    public function setAddress(string $Address): self
+    public function setAddress(Address $Address): self
     {
         $this->Address = $Address;
 

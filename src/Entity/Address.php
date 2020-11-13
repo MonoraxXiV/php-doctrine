@@ -20,7 +20,7 @@ class Address {
     /** @Column(type="string") **/
     private $zipcode;
 
-    public function __construct(string $street, int $streetNumber, string $city, int $zipcode)
+    public function __construct(string $street, string $streetNumber, string $city, string $zipcode)
     {
         $this->street = $street;
         $this->streetNumber = $streetNumber;
@@ -38,7 +38,7 @@ class Address {
         $this->street = $street;
     }
     
-    public function getStreetNumber(): int
+    public function getStreetNumber(): string
     {
         return $this->streetNumber;
     }
@@ -58,7 +58,7 @@ class Address {
         $this->city = $city;
     }
 
-    public function getZipcode(): int
+    public function getZipcode(): string
     {
         return $this->zipcode;
     }
